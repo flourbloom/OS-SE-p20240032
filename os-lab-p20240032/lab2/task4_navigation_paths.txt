@@ -1,0 +1,34 @@
+=== Task 4: Navigation with Paths ===
+--- Absolute path to HR/policies ---
+/home/keepitup/os-se-p20240032/os-lab-p20240032/lab2/techcorp/hr/policies
+leave_policy.tx
+remote_work.txt
+leave_policy.txt
+remote_work.txt
+--- Up to hr/ ---
+/home/keepitup/os-se-p20240032/os-lab-p20240032/lab2/techcorp/hr
+--- Relative path to onboarding/ ---
+/home/keepitup/os-se-p20240032/os-lab-p20240032/lab2/techcorp/hr/onboarding
+checklist.txt
+welcome_guide.txt
+--- Sideways to engineering/frontend/ ---
+/home/keepitup/os-se-p20240032/os-lab-p20240032/lab2/techcorp/engineering/frontend
+app_config.txt
+index.html
+styles.css
+--- Up two levels to techcorp/ ---
+/home/keepitup/os-se-p20240032/os-lab-p20240032/lab2/techcorp
+--- Absolute path to marketing/campaigns/ ---
+/home/keepitup/os-se-p20240032/os-lab-p20240032/lab2/techcorp/marketing/campaigns
+q1_launch.txt
+social_media.txt
+--- cd - (back to previous directory) ---
+/home/keepitup/os-se-p20240032/os-lab-p20240032/lab2/techcorp
+--- Challenge Navigation ---
+/home/keepitup/os-se-p20240032/os-lab-p20240032/lab2/techcorp/engineering/backend
+/home/keepitup/os-se-p20240032/os-lab-p20240032/lab2/techcorp/marketing/assets
+/usr/bin
+/home/keepitup/os-se-p20240032/os-lab-p20240032/lab2/techcorp/marketing/assets
+/home/keepitup/os-se-p20240032/os-lab-p20240032/lab2/techcorp/hr/onboarding
+checklist.txt
+welcome_guide.txt

@@ -1,0 +1,235 @@
+=== Task 6: Advanced Listing & Directory Audit ===
+--- Recursive Listing (ls -R) ---
+techcorp/:
+engineering
+hr
+marketing
+
+techcorp/engineering:
+backend
+devops
+frontend
+
+techcorp/engineering/backend:
+app.js
+database.sql
+pipline_backup.txt
+server_config.txt
+
+techcorp/engineering/devops:
+docker-compose.yml
+Dockerfile
+pipeline.txt
+security_audit.txt
+server_notice.txt
+
+techcorp/engineering/frontend:
+frontend_config.txt
+index.html
+styles.css
+
+techcorp/hr:
+onboarding
+policies
+
+techcorp/hr/onboarding:
+checklist.txt
+handbook.txt
+leave_policy.txt
+welcome_guide.txt
+
+techcorp/hr/policies:
+leave_policy.txt
+remote_work.txt
+
+techcorp/marketing:
+assets
+campaigns
+
+techcorp/marketing/assets:
+banner.jpg
+brochure.pdf
+logo_brief.txt
+logo.png
+
+techcorp/marketing/campaigns:
+q1_2026_launch.txt
+social_media.txt
+
+--- Sort by Size: engineering/ (ls -lS) ---
+total 4
+-rw-rw-r-- 1 keepitup keepitup 26 Mar 17 14:45 frontend_config.txt
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:45 index.html
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:45 styles.css
+total 8
+-rw-rw-r-- 1 keepitup keepitup 29 Mar 18 15:01 pipline_backup.txt
+-rw-rw-r-- 1 keepitup keepitup 29 Mar 17 14:45 server_config.txt
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:45 app.js
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:45 database.sql
+total 12
+-rw-rw-r-- 1 keepitup keepitup 48 Mar 18 14:35 server_notice.txt
+-rw-rw-r-- 1 keepitup keepitup 34 Mar 18 14:54 security_audit.txt
+-rw-rw-r-- 1 keepitup keepitup 29 Mar 17 14:45 pipeline.txt
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 docker-compose.yml
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 Dockerfile
+
+--- Sort by Time: techcorp/ (ls -lt) ---
+total 8
+-rw-rw-r-- 1 keepitup keepitup 32 Mar 17 14:43 remote_work.txt
+-rw-rw-r-- 1 keepitup keepitup 39 Mar 17 14:43 leave_policy.txt
+total 12
+-rw-rw-r-- 1 keepitup keepitup 39 Mar 18 14:46 leave_policy.txt
+-rw-rw-r-- 1 keepitup keepitup 23 Mar 18 14:37 handbook.txt
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:44 checklist.txt
+-rw-rw-r-- 1 keepitup keepitup 52 Mar 17 14:44 welcome_guide.txt
+total 8
+-rw-rw-r-- 1 keepitup keepitup 35 Mar 17 14:46 social_media.txt
+-rw-rw-r-- 1 keepitup keepitup 32 Mar 17 14:46 q1_2026_launch.txt
+
+--- Human-Readable (ls -lh) ---
+total 4.0K
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 banner.jpg
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 brochure.pdf
+-rw-rw-r-- 1 keepitup keepitup 22 Mar 18 14:36 logo_brief.txt
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 logo.png
+total 12K
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 docker-compose.yml
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 Dockerfile
+-rw-rw-r-- 1 keepitup keepitup 29 Mar 17 14:45 pipeline.txt
+-rw-rw-r-- 1 keepitup keepitup 34 Mar 18 14:54 security_audit.txt
+-rw-rw-r-- 1 keepitup keepitup 48 Mar 18 14:35 server_notice.txt
+
+--- Reverse Sort by Size (ls -rlS) ---
+total 8
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:45 database.sql
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:45 app.js
+-rw-rw-r-- 1 keepitup keepitup 29 Mar 17 14:45 server_config.txt
+-rw-rw-r-- 1 keepitup keepitup 29 Mar 18 15:01 pipline_backup.txt
+
+--- Reverse Sort by Time (ls -rlt) ---
+total 12
+-rw-rw-r-- 1 keepitup keepitup 52 Mar 17 14:44 welcome_guide.txt
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:44 checklist.txt
+-rw-rw-r-- 1 keepitup keepitup 23 Mar 18 14:37 handbook.txt
+-rw-rw-r-- 1 keepitup keepitup 39 Mar 18 14:46 leave_policy.txt
+
+--- Combined: Recursive + Human-Readable + Sort by Size (ls -lhRS) ---
+techcorp/:
+total 12K
+drwxrwxr-x 5 keepitup keepitup 4.0K Mar 17 14:42 engineering
+drwxrwxr-x 4 keepitup keepitup 4.0K Mar 17 14:42 hr
+drwxrwxr-x 4 keepitup keepitup 4.0K Mar 18 14:37 marketing
+
+techcorp/engineering:
+total 12K
+drwxrwxr-x 2 keepitup keepitup 4.0K Mar 18 15:02 backend
+drwxrwxr-x 2 keepitup keepitup 4.0K Mar 18 14:55 devops
+drwxrwxr-x 2 keepitup keepitup 4.0K Mar 18 15:14 frontend
+
+techcorp/engineering/backend:
+total 8.0K
+-rw-rw-r-- 1 keepitup keepitup 29 Mar 18 15:01 pipline_backup.txt
+-rw-rw-r-- 1 keepitup keepitup 29 Mar 17 14:45 server_config.txt
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:45 app.js
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:45 database.sql
+
+techcorp/engineering/devops:
+total 12K
+-rw-rw-r-- 1 keepitup keepitup 48 Mar 18 14:35 server_notice.txt
+-rw-rw-r-- 1 keepitup keepitup 34 Mar 18 14:54 security_audit.txt
+-rw-rw-r-- 1 keepitup keepitup 29 Mar 17 14:45 pipeline.txt
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 docker-compose.yml
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 Dockerfile
+
+techcorp/engineering/frontend:
+total 4.0K
+-rw-rw-r-- 1 keepitup keepitup 26 Mar 17 14:45 frontend_config.txt
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:45 index.html
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:45 styles.css
+
+techcorp/hr:
+total 8.0K
+drwxrwxr-x 2 keepitup keepitup 4.0K Mar 18 14:46 onboarding
+drwxrwxr-x 2 keepitup keepitup 4.0K Mar 18 15:29 policies
+
+techcorp/hr/onboarding:
+total 12K
+-rw-rw-r-- 1 keepitup keepitup 52 Mar 17 14:44 welcome_guide.txt
+-rw-rw-r-- 1 keepitup keepitup 39 Mar 18 14:46 leave_policy.txt
+-rw-rw-r-- 1 keepitup keepitup 23 Mar 18 14:37 handbook.txt
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:44 checklist.txt
+
+techcorp/hr/policies:
+total 8.0K
+-rw-rw-r-- 1 keepitup keepitup 39 Mar 17 14:43 leave_policy.txt
+-rw-rw-r-- 1 keepitup keepitup 32 Mar 17 14:43 remote_work.txt
+
+techcorp/marketing:
+total 8.0K
+drwxrwxr-x 2 keepitup keepitup 4.0K Mar 18 14:39 assets
+drwxrwxr-x 2 keepitup keepitup 4.0K Mar 18 15:10 campaigns
+
+techcorp/marketing/assets:
+total 4.0K
+-rw-rw-r-- 1 keepitup keepitup 22 Mar 18 14:36 logo_brief.txt
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 banner.jpg
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 brochure.pdf
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 logo.png
+
+techcorp/marketing/campaigns:
+total 8.0K
+-rw-rw-r-- 1 keepitup keepitup 35 Mar 17 14:46 social_media.txt
+-rw-rw-r-- 1 keepitup keepitup 32 Mar 17 14:46 q1_2026_launch.txt
+
+--- Challenge Investigation ---
+total 12
+-rw-rw-r-- 1 keepitup keepitup 39 Mar 18 14:46 leave_policy.txt
+-rw-rw-r-- 1 keepitup keepitup 23 Mar 18 14:37 handbook.txt
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:44 checklist.txt
+-rw-rw-r-- 1 keepitup keepitup 52 Mar 17 14:44 welcome_guide.txt
+techcorp/marketing/:
+total 8.0K
+drwxrwxr-x 2 keepitup keepitup 4.0K Mar 18 14:39 assets
+drwxrwxr-x 2 keepitup keepitup 4.0K Mar 18 15:10 campaigns
+
+techcorp/marketing/assets:
+total 4.0K
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 banner.jpg
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 brochure.pdf
+-rw-rw-r-- 1 keepitup keepitup 22 Mar 18 14:36 logo_brief.txt
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 logo.png
+
+techcorp/marketing/campaigns:
+total 8.0K
+-rw-rw-r-- 1 keepitup keepitup 32 Mar 17 14:46 q1_2026_launch.txt
+-rw-rw-r-- 1 keepitup keepitup 35 Mar 17 14:46 social_media.txt
+total 12
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 Dockerfile
+-rw-rw-r-- 1 keepitup keepitup  0 Mar 17 14:46 docker-compose.yml
+-rw-rw-r-- 1 keepitup keepitup 29 Mar 17 14:45 pipeline.txt
+-rw-rw-r-- 1 keepitup keepitup 34 Mar 18 14:54 security_audit.txt
+-rw-rw-r-- 1 keepitup keepitup 48 Mar 18 14:35 server_notice.txt
+total 100K
+-rw-------  1 keepitup keepitup  13K Mar 18 15:22 .bash_history
+drwxr-x--- 16 keepitup keepitup 4.0K Mar 18 14:16 .
+drwxr-xr-x  3 root     root     4.0K Mar 12 09:43 ..
+drwx------ 10 keepitup keepitup 4.0K Mar 16 11:06 .cache
+drwx------ 15 keepitup keepitup 4.0K Mar 16 10:59 .config
+drwxr-xr-x  2 keepitup keepitup 4.0K Mar 12 10:18 Desktop
+drwxr-xr-x  2 keepitup keepitup 4.0K Mar 12 10:18 Documents
+drwxr-xr-x  2 keepitup keepitup 4.0K Mar 12 10:18 Downloads
+drwx------  4 keepitup keepitup 4.0K Mar 12 10:18 .local
+drwxr-xr-x  2 keepitup keepitup 4.0K Mar 12 10:18 Music
+drwxrwxr-x  4 keepitup keepitup 4.0K Mar 12 16:09 os-se-p20240032
+drwxr-xr-x  3 keepitup keepitup 4.0K Mar 16 10:51 Pictures
+drwxr-xr-x  2 keepitup keepitup 4.0K Mar 12 10:18 Public
+drwx------  5 keepitup keepitup 4.0K Mar 12 15:02 snap
+drwx------  2 keepitup keepitup 4.0K Mar 12 16:30 .ssh
+drwxr-xr-x  2 keepitup keepitup 4.0K Mar 12 10:18 Templates
+drwxr-xr-x  2 keepitup keepitup 4.0K Mar 12 10:18 Videos
+-rw-r--r--  1 keepitup keepitup 3.7K Mar 31  2024 .bashrc
+-rw-r--r--  1 keepitup keepitup  807 Mar 31  2024 .profile
+-rw-r--r--  1 keepitup keepitup  220 Mar 31  2024 .bash_logout
+-rw-rw-r--  1 keepitup keepitup   55 Mar 12 16:13 .gitconfig
+-rw-------  1 keepitup keepitup   20 Mar 16 11:43 .lesshst
+-rw-r--r--  1 keepitup keepitup    0 Mar 12 10:19 .sudo_as_admin_successful

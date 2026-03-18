@@ -1,0 +1,27 @@
+/home/keepitup
+total 92
+drwxr-x--- 16 keepitup keepitup 4096 Mar 17 14:08 .
+drwxr-xr-x  3 root     root     4096 Mar 12 09:43 ..
+-rw-------  1 keepitup keepitup 5551 Mar 17 14:07 .bash_history
+-rw-r--r--  1 keepitup keepitup  220 Mar 31  2024 .bash_logout
+-rw-r--r--  1 keepitup keepitup 3771 Mar 31  2024 .bashrc
+drwx------ 10 keepitup keepitup 4096 Mar 16 11:06 .cache
+drwx------ 15 keepitup keepitup 4096 Mar 16 10:59 .config
+drwxr-xr-x  2 keepitup keepitup 4096 Mar 12 10:18 Desktop
+drwxr-xr-x  2 keepitup keepitup 4096 Mar 12 10:18 Documents
+drwxr-xr-x  2 keepitup keepitup 4096 Mar 12 10:18 Downloads
+-rw-rw-r--  1 keepitup keepitup   55 Mar 12 16:13 .gitconfig
+-rw-------  1 keepitup keepitup   20 Mar 16 11:43 .lesshst
+drwx------  4 keepitup keepitup 4096 Mar 12 10:18 .local
+drwxr-xr-x  2 keepitup keepitup 4096 Mar 12 10:18 Music
+drwxrwxr-x  4 keepitup keepitup 4096 Mar 12 16:09 os-se-p20240032
+drwxr-xr-x  3 keepitup keepitup 4096 Mar 16 10:51 Pictures
+-rw-r--r--  1 keepitup keepitup  807 Mar 31  2024 .profile
+drwxr-xr-x  2 keepitup keepitup 4096 Mar 12 10:18 Public
+drwx------  5 keepitup keepitup 4096 Mar 12 15:02 snap
+drwx------  2 keepitup keepitup 4096 Mar 12 16:30 .ssh
+-rw-r--r--  1 keepitup keepitup    0 Mar 12 10:19 .sudo_as_admin_successful
+drwxr-xr-x  2 keepitup keepitup 4096 Mar 12 10:18 Templates
+drwxr-xr-x  2 keepitup keepitup 4096 Mar 12 10:18 Videos
+--- Root directory (/) ---
+/
