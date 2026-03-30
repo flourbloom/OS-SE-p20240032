@@ -1,0 +1,10 @@
+total 32
+drwxr-xr-x 2 keepitup keepitup  4096 Mar 26 17:18 .
+drwxr-xr-x 3 keepitup keepitup  4096 Mar 26 17:16 ..
+-rwxr-xr-x 1 keepitup keepitup 16400 Mar 26 17:18 forkchild
+-rw-r--r-- 1 keepitup keepitup  1435 Mar 26 17:18 forkchild.c
+-rw-r--r-- 1 keepitup keepitup     0 Mar 26 17:21 result_forkchild.txt
+Parent process (PID: 4501) — creating child...
+Parent: waiting for child (PID: 4502) to finish...
+Parent: child exited with status 0
+Parent: done.
