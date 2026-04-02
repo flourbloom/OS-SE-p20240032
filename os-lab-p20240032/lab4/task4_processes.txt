@@ -1,0 +1,154 @@
+=== Task 4: Process Management ===
+--- Current processes (keepitup) ---
+    PID TTY          TIME CMD
+    411 ?        00:00:00 systemd
+    413 ?        00:00:00 (sd-pam)
+    438 pts/1    00:00:00 bash
+    630 pts/0    00:00:00 sh
+    639 pts/0    00:00:00 sh
+    700 pts/0    00:00:00 sh
+    709 pts/0    00:00:23 node
+    724 pts/2    00:00:05 node
+    749 pts/3    00:00:03 node
+    759 pts/0    00:00:01 node
+    967 pts/0    00:01:39 node
+   1539 pts/0    00:00:10 node
+  14048 pts/4    00:00:00 bash
+  20548 pts/0    00:00:00 sh
+  20549 pts/0    00:00:00 cpuUsage.sh
+  20552 pts/0    00:00:00 sleep
+  20554 pts/4    00:00:00 ps
+--- All processes (snapshot) ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0  21784 12524 ?        Ss   13:11   0:01 /sbin/init
+root           2  0.0  0.0   3120  2176 ?        Sl   13:11   0:00 /init
+root           7  0.0  0.0   3120  1792 ?        Sl   13:11   0:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+root          40  0.5  0.0  66828 15040 ?        S<s  13:11   0:20 /usr/lib/systemd/systemd-journald
+root          90  0.0  0.0  24884  6144 ?        Ss   13:11   0:00 /usr/lib/systemd/systemd-udevd
+systemd+     147  0.0  0.0  21460 12672 ?        Ss   13:11   0:00 /usr/lib/systemd/systemd-resolved
+systemd+     153  0.0  0.0  91028  7680 ?        Ssl  13:11   0:00 /usr/lib/systemd/systemd-timesyncd
+root         165  0.0  0.0   4236  2688 ?        Ss   13:11   0:00 /usr/sbin/cron -f -P
+message+     166  0.0  0.0   9636  4992 ?        Ss   13:11   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         182  0.0  0.0  17968  8576 ?        Ss   13:11   0:00 /usr/lib/systemd/systemd-logind
+root         200  0.0  0.0   3160  1920 hvc0     Ss+  13:11   0:00 /sbin/agetty -o -p -- \u --noclear --keep-baud - 115200,38400,9600 vt220
+syslog       203  0.0  0.0 222508  5376 ?        Ssl  13:11   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         222  0.0  0.0   3116  1920 tty1     Ss+  13:11   0:00 /sbin/agetty -o -p -- \u --noclear - linux
+root         235  0.0  0.1 107008 22144 ?        Ssl  13:11   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         357  0.0  0.0   6692  4352 pts/1    Ss   13:11   0:00 /bin/login -f
+keepitup     411  0.0  0.0  20316 11392 ?        Ss   13:11   0:00 /usr/lib/systemd/systemd --user
+keepitup     413  0.0  0.0  21160  3516 ?        S    13:11   0:00 (sd-pam)
+keepitup     438  0.0  0.0   9768  8692 pts/1    S+   13:11   0:00 -bash
+root         624  0.0  0.0   3128   904 ?        Ss   13:11   0:00 /init
+--- Process tree ---
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 13:11 ?        00:00:01 /sbin/init
+root           2       1  0 13:11 ?        00:00:00 /init
+root           7       2  0 13:11 ?        00:00:00  \_ plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+root         357       2  0 13:11 pts/1    00:00:00  \_ /bin/login -f
+keepitup     438     357  0 13:11 pts/1    00:00:00  |   \_ -bash
+root         624       2  0 13:11 ?        00:00:00  \_ /init
+root         627     624  0 13:11 ?        00:00:00  |   \_ /init
+keepitup     630     627  0 13:11 pts/0    00:00:00  |       \_ sh -c "$VSCODE_WSL_EXT_LOCATION/scripts/wslServer.sh" cfbea10c5ffb233ea9177d34726e6056e89913dc stable code-server .vscode-server --host=127.0.0.1 --port=0 --connection-token=2737991469-3791225174-236835577-3134762381 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+keepitup     639     630  0 13:11 pts/0    00:00:00  |           \_ sh /mnt/c/Users/USer/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3/scripts/wslServer.sh cfbea10c5ffb233ea9177d34726e6056e89913dc stable code-server .vscode-server --host=127.0.0.1 --port=0 --connection-token=2737991469-3791225174-236835577-3134762381 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+keepitup     700     639  0 13:11 pts/0    00:00:00  |               \_ sh /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/bin/code-server --host=127.0.0.1 --port=0 --connection-token=2737991469-3791225174-236835577-3134762381 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+keepitup     709     700  0 13:11 pts/0    00:00:23  |                   \_ /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/out/server-main.js --host=127.0.0.1 --port=0 --connection-token=2737991469-3791225174-236835577-3134762381 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+keepitup     759     709  0 13:11 pts/0    00:00:01  |                       \_ /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/out/bootstrap-fork --type=fileWatcher
+keepitup     967     709  2 13:11 pts/0    00:01:41  |                       \_ /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node --dns-result-order=ipv4first /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=true
+keepitup    1539     709  0 13:12 pts/0    00:00:10  |                       \_ /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/out/bootstrap-fork --type=ptyHost --logsPath /home/keepitup/.vscode-server/data/logs/20260402T131242
+keepitup   14048    1539  0 13:56 pts/4    00:00:00  |                           \_ /bin/bash --init-file /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+keepitup   21091   14048  0 14:16 pts/4    00:00:00  |                               \_ ps -ef --forest
+keepitup   21092   14048  0 14:16 pts/4    00:00:00  |                               \_ head -n 30
+root         722       2  0 13:11 ?        00:00:00  \_ /init
+root         723     722  0 13:11 ?        00:00:02  |   \_ /init
+keepitup     724     723  0 13:11 pts/2    00:00:05  |       \_ /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node -e const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 35581 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+root         743       2  0 13:11 ?        00:00:00  \_ /init
+root         745     743  0 13:11 ?        00:00:01      \_ /init
+keepitup     749     745  0 13:11 pts/3    00:00:03          \_ /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node -e const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 35581 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+root          40       1  0 13:11 ?        00:00:20 /usr/lib/systemd/systemd-journald
+root          90       1  0 13:11 ?        00:00:00 /usr/lib/systemd/systemd-udevd
+systemd+     147       1  0 13:11 ?        00:00:00 /usr/lib/systemd/systemd-resolved
+systemd+     153       1  0 13:11 ?        00:00:00 /usr/lib/systemd/systemd-timesyncd
+root         165       1  0 13:11 ?        00:00:00 /usr/sbin/cron -f -P
+message+     166       1  0 13:11 ?        00:00:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+--- Top 10 CPU consumers (via ps, not top) ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+keepitup     967  2.5  3.6 54820156 588952 pts/0 Sl+  13:10   1:47 /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node --dns-result-order=ipv4first /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=true
+keepitup     709  0.5  1.0 11885788 161360 pts/0 Sl+  13:10   0:24 /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/out/server-main.js --host=127.0.0.1 --port=0 --connection-token=2737991469-3791225174-236835577-3134762381 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+root          40  0.5  0.0  66828 15036 ?        S<s  13:10   0:22 /usr/lib/systemd/systemd-journald
+keepitup    1539  0.2  0.4 1139400 76680 pts/0   Sl+  13:12   0:11 /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/out/bootstrap-fork --type=ptyHost --logsPath /home/keepitup/.vscode-server/data/logs/20260402T131242
+keepitup     724  0.1  0.3 1015800 56888 pts/2   Ssl+ 13:10   0:06 /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node -e const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 35581 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+keepitup     749  0.0  0.4 1027584 67584 pts/3   Rsl+ 13:10   0:03 /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node -e const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 35581 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+root         723  0.0  0.0   3144  1296 ?        S    13:10   0:02 /init
+root           1  0.0  0.0  21784 12524 ?        Ss   13:10   0:01 /sbin/init
+root         745  0.0  0.0   3144  1168 ?        S    13:10   0:01 /init
+keepitup     759  0.0  0.3 1264312 59688 pts/0   Sl+  13:10   0:01 /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/out/bootstrap-fork --type=fileWatcher
+--- Top 10 memory consumers ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+keepitup     967  2.5  3.6 54820156 588952 pts/0 Sl+  13:10   1:48 /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node --dns-result-order=ipv4first /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=true
+keepitup     709  0.5  1.0 11885788 161360 pts/0 Sl+  13:10   0:24 /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/out/server-main.js --host=127.0.0.1 --port=0 --connection-token=2737991469-3791225174-236835577-3134762381 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+keepitup    1539  0.2  0.4 1139400 76680 pts/0   Sl+  13:12   0:11 /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/out/bootstrap-fork --type=ptyHost --logsPath /home/keepitup/.vscode-server/data/logs/20260402T131242
+keepitup     749  0.0  0.4 1027584 67584 pts/3   Ssl+ 13:10   0:03 /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node -e const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 35581 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+keepitup     759  0.0  0.3 1264312 59688 pts/0   Sl+  13:10   0:01 /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/out/bootstrap-fork --type=fileWatcher
+keepitup     724  0.1  0.3 1015800 56888 pts/2   Ssl+ 13:10   0:06 /home/keepitup/.vscode-server/bin/cfbea10c5ffb233ea9177d34726e6056e89913dc/node -e const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 35581 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+root         235  0.0  0.1 107008 22144 ?        Ssl  13:10   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root          40  0.5  0.0  66828 15028 ?        S<s  13:10   0:22 /usr/lib/systemd/systemd-journald
+root       19906  0.0  0.0 1830352 13056 ?       Ssl  14:12   0:00 /usr/libexec/wsl-pro-service
+systemd+     147  0.0  0.0  21460 12672 ?        Ss   13:10   0:00 /usr/lib/systemd/systemd-resolved
+--- Background jobs ---
+[1]  25749 Running                 sleep 300 &
+[2]- 25808 Running                 sleep 300 &
+[3]+ 25869 Running                 sleep 500 &
+--- After Ctrl+Z (stopped job) ---
+[1]  25749 Running                 sleep 300 &
+[2]  25808 Running                 sleep 300 &
+[3]- 25869 Running                 sleep 500 &
+[4]+ 26284 Stopped                 sleep 600
+--- After bg (resumed in background) ---
+[1]  25749 Running                 sleep 300 &
+[2]  25808 Running                 sleep 300 &
+[3]- 25869 Running                 sleep 500 &
+[4]+ 26284 Stopped                 sleep 600
+--- After terminating all sleep jobs ---
+[3]- 25869 Running                 sleep 500 &
+[4]+ 26284 Stopped                 sleep 600
+Started sleep with PID: 27192
+--- Available signals ---
+ 1) SIGHUP	 2) SIGINT	 3) SIGQUIT	 4) SIGILL	 5) SIGTRAP
+ 6) SIGABRT	 7) SIGBUS	 8) SIGFPE	 9) SIGKILL	10) SIGUSR1
+11) SIGSEGV	12) SIGUSR2	13) SIGPIPE	14) SIGALRM	15) SIGTERM
+16) SIGSTKFLT	17) SIGCHLD	18) SIGCONT	19) SIGSTOP	20) SIGTSTP
+21) SIGTTIN	22) SIGTTOU	23) SIGURG	24) SIGXCPU	25) SIGXFSZ
+26) SIGVTALRM	27) SIGPROF	28) SIGWINCH	29) SIGIO	30) SIGPWR
+31) SIGSYS	34) SIGRTMIN	35) SIGRTMIN+1	36) SIGRTMIN+2	37) SIGRTMIN+3
+38) SIGRTMIN+4	39) SIGRTMIN+5	40) SIGRTMIN+6	41) SIGRTMIN+7	42) SIGRTMIN+8
+43) SIGRTMIN+9	44) SIGRTMIN+10	45) SIGRTMIN+11	46) SIGRTMIN+12	47) SIGRTMIN+13
+48) SIGRTMIN+14	49) SIGRTMIN+15	50) SIGRTMAX-14	51) SIGRTMAX-13	52) SIGRTMAX-12
+53) SIGRTMAX-11	54) SIGRTMAX-10	55) SIGRTMAX-9	56) SIGRTMAX-8	57) SIGRTMAX-7
+58) SIGRTMAX-6	59) SIGRTMAX-5	60) SIGRTMAX-4	61) SIGRTMAX-3	62) SIGRTMAX-2
+63) SIGRTMAX-1	64) SIGRTMAX	
+--- After SIGSTOP ---
+    PID STAT CMD
+  27192 T    sleep 1000
+--- After SIGCONT ---
+    PID STAT CMD
+  27192 S    sleep 1000
+--- After SIGTERM ---
+    PID STAT CMD
+--- nohup demo ---
+nohup sleep PID: 28144
+-rw------- 1 keepitup keepitup 0 Apr  2 14:34 nohup.out
+--- Challenge Process Management ---
+--- 4a ---
+keepitup   25869   24613  0 14:29 pts/4    00:00:00  |                               \_ sleep 500
+keepitup   26284   24613  0 14:30 pts/4    00:00:00  |                               \_ sleep 600
+keepitup   28748   24613  0 14:35 pts/4    00:00:00  |                               \_ sleep 100
+keepitup   28749   24613  0 14:35 pts/4    00:00:00  |                               \_ sleep 200
+keepitup   28750   24613  0 14:35 pts/4    00:00:00  |                               \_ sleep 300
+keepitup   29136   24613  0 14:36 pts/4    00:00:00  |                               \_ grep --color=auto sleep
+
+--- After killing sleep processes ---
+keepitup   26284   24613  0 14:30 pts/4    00:00:00 sleep 600
+keepitup   29624   24613  0 14:37 pts/4    00:00:00 grep --color=auto sleep
+--- 4b ---
+438
+24613
