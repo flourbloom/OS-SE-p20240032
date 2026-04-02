@@ -403,3 +403,8 @@ GRUB_CMDLINE_LINUX=""
 # Uncomment to get a beep at grub start
 #GRUB_INIT_TUNE="480 440 1"
 GRUB_BACKGROUND="/boot/grub/splash.tga"
+
+=== Part C: Boot Recovery ===
+Boot recovery successful on Wed 01 Apr 2026 01:09:14 PM +07
+6.17.0-19-generic
+ 13:09:36 up 3 min,  1 user,  load average: 1.40, 1.45, 0.67
