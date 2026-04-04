@@ -2,8 +2,8 @@
 
 - **Student Name:** Chea Seavhong
 - **Student ID:** p20240032
-- **Partner Name (Task 5):** [Partner Name Here]
-- **Partner ID (Task 5):** [Partner Student ID Here]
+- **Partner Name (Task 5):** Pi Sereyvathanak
+- **Partner ID (Task 5):** p20240045
 
 ---
 
@@ -15,8 +15,8 @@ During the lab, each task redirected its output into `.txt` files. These files a
 - [X] `task2_links.txt`
 - [X] `task3_grub.txt`
 - [X] `task4_shared_objects.txt`
-- [ ] `task5_shared_library.txt`
-- [ ] `task_history.txt`
+- [X] `task5_shared_library.txt`
+- [X] `task_history.txt`
 
 ---
 
