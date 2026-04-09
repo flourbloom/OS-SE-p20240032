@@ -1,0 +1,15 @@
+total 832
+drwxr-xr-x 92 root root       4096 Apr  2 13:12 .
+drwxr-xr-x 28 root root       4096 Apr  2 13:12 ..
+-rw-------  1 root root          0 Feb 10 07:54 .pwd.lock
+-rw-r--r--  1 root root        862 Feb 10 07:54 .resolv.conf.systemd-resolved.bak
+-rw-r--r--  1 root root        208 Feb 10 07:54 .updated
+drwxr-xr-x  2 root root       4096 Feb 10 07:56 PackageKit
+drwxr-xr-x  7 root root       4096 Feb 10 07:56 X11
+-rw-r--r--  1 root root       3444 Jul  6  2023 adduser.conf
+drwxr-xr-x  2 root root       4096 Mar 19 10:18 alternatives
+drwxr-xr-x  3 root root       4096 Mar 22 01:08 apache2
+drwxr-xr-x  2 root root       4096 Feb 10 07:56 apparmor
+drwxr-xr-x  9 root root       4096 Mar 21 07:27 apparmor.d
+drwxr-xr-x  3 root root       4096 Feb 10 07:56 apport
+drwxr-xr-x  8 root root       4096 Feb 10 07:56 apt

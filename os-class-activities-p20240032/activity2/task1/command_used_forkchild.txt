@@ -1,0 +1,20 @@
+  241  ls -a
+  242  clear
+  243  git pull
+  244  clear
+  245  cd activity2/task1
+  246  cd os-class-activities-p20240032/
+  247  clear
+  248  cd activity2/task1
+  249  clear
+  250  gcc -o forkchild forkchild.c
+  251  ./forkchild > result_forkchild.txt 2>&1
+  252  clear
+  253  gcc -o forkchild forkchild.c
+  254  ./forkchild > result_forkchild.txt 2>&1
+  255  clear
+  256  gcc -o forkchild forkchild.c
+  257  ./forkchild > result_forkchild.txt 2>&1
+  258  cat result_forkchild.txt
+  259  ./forkchild > result_forkchild.txt 2>&1
+  260  history | tail -n 20 > command_used_forkchild.txt
