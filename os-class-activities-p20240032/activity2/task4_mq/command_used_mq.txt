@@ -1,0 +1,20 @@
+ 1247  gcc -o shm-producer shm-producer.c -lrt
+ 1248  clear
+ 1249  ls
+ 1250  gcc -o shm-producer shm-producer.c -lrt
+ 1251  clear
+ 1252  gcc -o shm-producer shm-producer.c -lrt
+ 1253  gcc -o shm-consumer shm-consumer.c -lrt
+ 1254  ./shm-producer 
+ 1255  ./shm-consumer > result-shm-ipc.txt
+ 1256  cat result-shm-ipc.txt 
+ 1257  history | tail -n 20 > command_used_shm.txt
+ 1258  clear
+ 1259  gcc -o sender sender.c -lrt
+ 1260  cd ../task4_mq/
+ 1261  gcc -o sender sender.c -lrt
+ 1262  gcc -o receiver receiver.c -lrt
+ 1263  ./sender 
+ 1264  ./receiver > result-mq-ipc.txt
+ 1265  cat result-mq-ipc.txt
+ 1266  history | tail -n 20 > command_used_mq.txt

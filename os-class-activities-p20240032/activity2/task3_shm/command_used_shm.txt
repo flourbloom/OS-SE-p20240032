@@ -1,0 +1,20 @@
+ 1238  sudo ./sysinfo_test_v2
+ 1239  gcc sysinfo_test_v2.c -L. -ltechcorp_sysinfo -o sysinfo_test_v2
+ 1240  ./sysinfo_test_v2 
+ 1241  whoami
+ 1242  gcc -o shm-producer shm-producer.c -lrt
+ 1243  gcc -o shm-consumer shm-consumer.c -lrt
+ 1244  cd task3_shm/
+ 1245  gcc -o shm-producer shm-producer.c -lrt
+ 1246  ls
+ 1247  gcc -o shm-producer shm-producer.c -lrt
+ 1248  clear
+ 1249  ls
+ 1250  gcc -o shm-producer shm-producer.c -lrt
+ 1251  clear
+ 1252  gcc -o shm-producer shm-producer.c -lrt
+ 1253  gcc -o shm-consumer shm-consumer.c -lrt
+ 1254  ./shm-producer 
+ 1255  ./shm-consumer > result-shm-ipc.txt
+ 1256  cat result-shm-ipc.txt 
+ 1257  history | tail -n 20 > command_used_shm.txt
