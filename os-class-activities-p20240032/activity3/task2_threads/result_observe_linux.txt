@@ -1,0 +1,18 @@
+keepitup   19670    2799   19670  0    5 12:13 pts/4    00:00:00 ./threads_observe
+keepitup   19670    2799   19672  0    5 12:13 pts/4    00:00:00 ./threads_observe
+keepitup   19670    2799   19673  0    5 12:13 pts/4    00:00:00 ./threads_observe
+keepitup   19670    2799   19674  0    5 12:13 pts/4    00:00:00 ./threads_observe
+keepitup   19670    2799   19675  0    5 12:13 pts/4    00:00:00 ./threads_observe
+keepitup   19888    6280   19888  0    1 12:14 pts/5    00:00:00 grep --color=auto threads_observe
+    PID    SPID TTY          TIME CMD
+  19670   19670 pts/4    00:00:00 threads_observe
+  19670   19672 pts/4    00:00:00 threads_observe
+  19670   19673 pts/4    00:00:00 threads_observe
+  19670   19674 pts/4    00:00:00 threads_observe
+  19670   19675 pts/4    00:00:00 threads_observe
+--- /proc/19670/task/ listing ---
+19670
+19672
+19673
+19674
+19675

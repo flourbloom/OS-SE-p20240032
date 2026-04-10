@@ -1,0 +1,20 @@
+  982  touch task1_socket
+  983  clear
+  984  cd activity3/task1_socket
+  985  clear
+  986  mkdir task1_socket
+  987  cd task1_socket/
+  988  touch server.c
+  989  touch client.c
+  990  cd os-class-activities-p20240032/activity3/task1_socket/
+  991  ./client
+  992  ./client > result_client.txt 2>&1
+  993  wait
+  994  cat result_server.txt result_client.txt > result_socket.txt
+  995  clearr
+  996  clear
+  997  ./client > result_client.txt 2>&1
+  998  wait
+  999  cat result_server.txt result_client.txt > result_socket.txt
+ 1000  history | tail -n 20 > command_used_socket.txt\
+ 1001  history | tail -n 20 > command_used_socket.txt

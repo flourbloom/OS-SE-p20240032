@@ -1,0 +1,30 @@
+  965  ls
+  966  cs OS-SE-p20240032/
+  967  cd OS-SE-p20240032/
+  968  ls
+  969  cd /
+  970  ls
+  971  cd ~
+  972  ls
+  973  history
+  974  clear
+  975  cd os-class-activities-p20240032/
+  976  l
+  977  cd activity3
+  978  ls
+  979  clear
+  980  cd activity3/task1_socket
+  981  clear
+  982  touch task1_socket
+  983  clear
+  984  cd activity3/task1_socket
+  985  clear
+  986  mkdir task1_socket
+  987  cd task1_socket/
+  988  touch server.c
+  989  touch client.c
+  990  cd os-class-activities-p20240032/activity3/task3_java/ && touch PoolDemo.java
+  991  javac PoolDemo.java 
+  992  java PoolDemo > result_pool_demo.txt 2>&1
+  993  cat result_pool_demo.txt 
+  994  history | tail -n 30 > command_used_java.txt

@@ -1,0 +1,20 @@
+  990  cd os-class-activities-p20240032/activity3/task1_socket/
+  991  ./client
+  992  ./client > result_client.txt 2>&1
+  993  wait
+  994  cat result_server.txt result_client.txt > result_socket.txt
+  995  clearr
+  996  clear
+  997  ./client > result_client.txt 2>&1
+  998  wait
+  999  cat result_server.txt result_client.txt > result_socket.txt
+ 1000  history | tail -n 20 > command_used_socket.txt\
+ 1001  history | tail -n 20 > command_used_socket.txt
+ 1002  cclear
+ 1003  clear
+ 1004  cd ..
+ 1005  cd task2_threads/
+ 1006  touch threads_mutex.c
+ 1007  ./threads_mutex > result_threads_mutex.txt 2>&1
+ 1008  cat result_threads_mutex.txt 
+ 1009  history | tail -n 20 > command_used_threads.txt
