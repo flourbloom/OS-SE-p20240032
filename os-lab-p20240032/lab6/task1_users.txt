@@ -1,0 +1,20 @@
+dev_alice:x:1014:1014::/home/dev_alice:/bin/bash
+dev_bob:x:1015:1015::/home/dev_bob:/bin/bash
+total 68
+drwxr-xr-x 17 root       root        4096 May 23 08:12 .
+drwxr-xr-x 30 root       root        4096 May 19 14:33 ..
+drwxr-x---  2 dev_alice  dev_alice   4096 May 23 08:12 dev_alice
+drwxr-x---  2 dev_bob    dev_bob     4096 May 23 08:12 dev_bob
+drwxr-x---  2 engadmin   engineering 4096 May 21 15:32 engadmin
+drwxr-x---  2 enguser1   engineering 4096 May 19 14:39 enguser1
+drwxr-x---  2 enguser2   engineering 4096 May 19 14:39 enguser2
+drwxr-x---  2 isadmin    is          4096 May 19 14:37 isadmin
+drwxr-x---  2 isuser1    is          4096 May 19 14:40 isuser1
+drwxr-x---  2 isuser2    is          4096 May 19 14:40 isuser2
+drwxr-x--- 23 keepitup   keepitup    4096 Apr  4 23:21 keepitup
+drwxr-x---  5 sak        sak         4096 May 19 13:55 sak
+drwxr-x---  2 salesadmin sales       4096 May 21 15:33 salesadmin
+drwxr-x---  2 salesuser1 sales       4096 May 19 14:39 salesuser1
+drwxr-x---  2 salesuser2 sales       4096 May 19 14:39 salesuser2
+drwxr-x---  5 seavhong   seavhong    4096 May 12 14:40 seavhong
+drwxr-x---  5 Vathanak   Vathanak    4096 May 12 14:47 Vathanak
