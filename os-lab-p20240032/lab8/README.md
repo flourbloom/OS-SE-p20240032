@@ -1,8 +1,8 @@
 # OS Lab 8 Submission - The Quantum Widget Exploit
 
-- **Student Name:** [Your Name Here]
-- **Student ID:** [Your Student ID Here]
-- **Partner Username:** [Classmate username for Levels 5-6]
+- **Student Name:** Chea Seavhong
+- **Student ID:** p20240032
+- **Partner Username:** se-kiv-sovannlyda
 
 ---
 
