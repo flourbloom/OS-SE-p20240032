@@ -1,0 +1,13 @@
+]633;E;echo "=== archive sizes (plain vs compressed) ===";78abbf05-bf8b-48b4-8f3b-ec19ed98ca05]633;C=== archive sizes (plain vs compressed) ===
+-rw-r--r-- 1 keepitup keepitup 1.3K Jun 16 13:22 /home/keepitup/os-lab-automation/project_compressed.tar.gz
+-rw-r--r-- 1 keepitup keepitup  10K Jun 16 13:22 /home/keepitup/os-lab-automation/project_plain.tar
+=== contents of compressed archive ===
+project/
+project/README.md
+project/src/
+project/src/widget.py
+project/docs/
+project/docs/notes.txt
+project/docs/changelog.txt
+=== restore verification ===
+RESTORE OK: archive matches original

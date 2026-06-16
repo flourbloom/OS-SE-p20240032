@@ -1,0 +1,23 @@
+]633;E;echo "=== backup script permissions ===";78abbf05-bf8b-48b4-8f3b-ec19ed98ca05]633;C=== backup script permissions ===
+-rwxr-xr-x 1 keepitup keepitup 792 Jun 16 13:27 /home/keepitup/bin/backup_project
+=== archives kept (should be 3) ===
+/home/keepitup/os-lab-automation/backups/project_20260616_132813.tar.gz
+/home/keepitup/os-lab-automation/backups/project_20260616_132807.tar.gz
+/home/keepitup/os-lab-automation/backups/project_20260616_132805.tar.gz
+=== backup log ===
+2026-06-16 13:28:01 | starting backup of /home/keepitup/os-lab-automation/project
+2026-06-16 13:28:01 | created archive /home/keepitup/os-lab-automation/backups/project_20260616_132801.tar.gz
+2026-06-16 13:28:01 | no old archives to prune
+2026-06-16 13:28:01 | backup finished successfully
+2026-06-16 13:28:05 | starting backup of /home/keepitup/os-lab-automation/project
+2026-06-16 13:28:05 | created archive /home/keepitup/os-lab-automation/backups/project_20260616_132805.tar.gz
+2026-06-16 13:28:05 | no old archives to prune
+2026-06-16 13:28:05 | backup finished successfully
+2026-06-16 13:28:07 | starting backup of /home/keepitup/os-lab-automation/project
+2026-06-16 13:28:07 | created archive /home/keepitup/os-lab-automation/backups/project_20260616_132807.tar.gz
+2026-06-16 13:28:07 | no old archives to prune
+2026-06-16 13:28:07 | backup finished successfully
+2026-06-16 13:28:13 | starting backup of /home/keepitup/os-lab-automation/project
+2026-06-16 13:28:13 | created archive /home/keepitup/os-lab-automation/backups/project_20260616_132813.tar.gz
+2026-06-16 13:28:13 | pruned old archive /home/keepitup/os-lab-automation/backups/project_20260616_132801.tar.gz
+2026-06-16 13:28:13 | backup finished successfully
