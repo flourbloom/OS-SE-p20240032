@@ -1,0 +1,6 @@
+    PID    SPID TTY          TIME CMD
+1483379 1483379 pts/8    00:00:00 thread_demo
+1483379 1483380 pts/8    00:00:00 thread_demo
+1483379 1483381 pts/8    00:00:00 thread_demo
+1483379 1483382 pts/8    00:00:00 thread_demo
+1483379 1483383 pts/8    00:00:00 thread_demo

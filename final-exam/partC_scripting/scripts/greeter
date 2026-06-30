@@ -1,0 +1,20 @@
+#!/bin/bash
+
+USER_NAME=$(whoami)
+LOGGED_IN=$(who | wc -l)
+UPTIME_INFO=$(uptime -p)
+
+MESSAGES=(
+"Welcome to NebulaSoft!"
+"Relay Pass launch is almost ready!"
+"Have a productive day!"
+)
+
+INDEX=$((RANDOM % ${#MESSAGES[@]}))
+
+echo "===================================="
+echo " User    : $USER_NAME"
+echo " Logged in users : $LOGGED_IN"
+echo " Uptime  : $UPTIME_INFO"
+echo " Message : ${MESSAGES[$INDEX]}"
+echo "===================================="

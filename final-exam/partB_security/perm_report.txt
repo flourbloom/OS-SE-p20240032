@@ -1,0 +1,17 @@
+=== ls -l ===
+total 4
+-rw------- 1 se-chea-seavhong se-chea-seavhong    0 Jun 30 13:54 private.txt
+drwx--x--x 2 se-chea-seavhong se-chea-seavhong 4096 Jun 30 13:54 shared
+
+=== ls -ld ===
+drwx--x--x 2 se-chea-seavhong se-chea-seavhong 4096 Jun 30 13:54 partB_security/security_demo/shared
+
+=== stat private.txt ===
+  File: partB_security/security_demo/private.txt
+  Size: 0         	Blocks: 0          IO Block: 4096   regular empty file
+Device: 252,0	Inode: 47349242    Links: 1
+Access: (0600/-rw-------)  Uid: ( 1117/se-chea-seavhong)   Gid: ( 1119/se-chea-seavhong)
+Access: 2026-06-30 13:54:18.741955450 +0700
+Modify: 2026-06-30 13:54:18.741955450 +0700
+Change: 2026-06-30 13:54:44.507789472 +0700
+ Birth: 2026-06-30 13:54:18.741955450 +0700

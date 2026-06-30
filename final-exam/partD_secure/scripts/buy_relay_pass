@@ -1,0 +1,52 @@
+#!/bin/bash
+
+SCRIPT_DIR="$HOME/OS-SE-p20240032/final-exam/partD_secure"
+
+STOCK_FILE="$SCRIPT_DIR/stock.txt"
+LOG_FILE="$SCRIPT_DIR/sales.log"
+LOCK_FILE="$SCRIPT_DIR/stock.lock"
+
+buyer="$1"
+qty="$2"
+
+# -----------------------
+# Input validation
+# -----------------------
+if [[ -z "$buyer" || -z "$qty" ]]; then
+    echo "Usage: buy_relay_pass <buyer> <quantity>"
+    exit 1
+fi
+
+if ! [[ "$qty" =~ ^[1-9][0-9]*$ ]]; then
+    echo "Quantity must be a positive integer."
+    exit 1
+fi
+CAP=7
+
+if (( qty > CAP )); then
+    echo "Rejected: exceeds cap of $CAP"
+    exit 0
+fi
+
+# -----------------------
+# Critical section with lock
+# -----------------------
+(
+flock -x 200
+
+stock=$(cat "$STOCK_FILE")
+
+if (( stock >= qty )); then
+    sleep 0.05  # helps expose race condition (before patch)
+
+    new_stock=$((stock - qty))
+    echo "$new_stock" > "$STOCK_FILE"
+
+    echo "$(date '+%F %T') | Buyer: $buyer | Qty: $qty | Student ID: p20240032" >> "$LOG_FILE"
+
+    echo "$buyer purchased $qty Relay Pass."
+else
+    echo "Not enough stock."
+fi
+
+) 200>"$LOCK_FILE"

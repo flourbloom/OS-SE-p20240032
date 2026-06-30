@@ -1,0 +1,11 @@
+Collector Report
+Generated: Tue Jun 30 02:01:49 PM +07 2026
+------------------------
+Reading: /home/se-chea-seavhong/OS-SE-p20240032/final-exam/partC_scripting/test_data/dir1/file1.txt
+Network configuration
+
+Reading: /home/se-chea-seavhong/OS-SE-p20240032/final-exam/partC_scripting/test_data/dir2/file2.txt
+System status
+
+Skipping: /home/se-chea-seavhong/OS-SE-p20240032/final-exam/partC_scripting/test_data/dir3/file3.txt (missing or unreadable)
+Skipping: /home/se-chea-seavhong/OS-SE-p20240032/final-exam/partC_scripting/test_data/dir4/file4.txt (missing or unreadable)

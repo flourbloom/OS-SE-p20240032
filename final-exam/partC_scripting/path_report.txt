@@ -1,0 +1,5 @@
+PATH:
+/home/se-chea-seavhong/bin:/home/se-chea-seavhong/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Greeter location:
+/home/se-chea-seavhong/bin/greeter

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo 100 > "$HOME/OS-SE-p20240032/final-exam/partD_secure/stock.txt"
+
+for i in $(seq 1 50)
+do
+    buy_relay_pass "Buyer$i" 1 &
+done
+
+wait
+
+echo "Final stock: $(cat $HOME/OS-SE-p20240032/final-exam/partD_secure/stock.txt)"

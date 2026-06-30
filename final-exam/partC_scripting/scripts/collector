@@ -1,0 +1,27 @@
+#!/bin/bash
+
+REPORT="$HOME/OS-SE-p20240032/final-exam/partC_scripting/report.txt"
+
+FILES=(
+"$HOME/OS-SE-p20240032/final-exam/partC_scripting/test_data/dir1/file1.txt"
+"$HOME/OS-SE-p20240032/final-exam/partC_scripting/test_data/dir2/file2.txt"
+"$HOME/OS-SE-p20240032/final-exam/partC_scripting/test_data/dir3/file3.txt"
+"$HOME/OS-SE-p20240032/final-exam/partC_scripting/test_data/dir4/file4.txt"
+)
+
+echo "Collector Report" > "$REPORT"
+echo "Generated: $(date)" >> "$REPORT"
+echo "------------------------" >> "$REPORT"
+
+for file in "${FILES[@]}"
+do
+    if [[ -e "$file" && -r "$file" ]]; then
+        echo "Reading: $file" >> "$REPORT"
+        cat "$file" >> "$REPORT"
+        echo "" >> "$REPORT"
+    else
+        echo "Skipping: $file (missing or unreadable)" >> "$REPORT"
+    fi
+done
+
+echo "Report saved to $REPORT"

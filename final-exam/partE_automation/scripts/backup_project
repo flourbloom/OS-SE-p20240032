@@ -1,0 +1,19 @@
+#!/bin/bash
+
+PROJECT="$HOME/OS-SE-p20240032/final-exam/partE_automation/sample_project"
+BACKUP_DIR="$HOME/OS-SE-p20240032/final-exam/partE_automation/backups"
+
+mkdir -p "$BACKUP_DIR"
+
+TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+
+ARCHIVE="$BACKUP_DIR/project_$TIMESTAMP.tar.gz"
+
+tar -czf "$ARCHIVE" -C "$(dirname "$PROJECT")" "$(basename "$PROJECT")"
+
+echo "Created: $ARCHIVE"
+
+ls -1t "$BACKUP_DIR"/*.tar.gz | tail -n +5 | xargs -r rm
+
+echo "Current backups:"
+ls -1 "$BACKUP_DIR"

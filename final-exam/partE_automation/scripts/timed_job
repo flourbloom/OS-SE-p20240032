@@ -1,0 +1,12 @@
+#!/bin/bash
+
+LOGFILE="$1"
+TOKEN="RUNGUARD"
+TODAY=$(date '+%F')
+
+if grep -q "$TOKEN-$TODAY" "$LOGFILE" 2>/dev/null; then
+    echo "Skipped (already ran today)"
+    exit 0
+fi
+
+echo "$(date '+%F %T') - Timed job executed $TOKEN-$TODAY" >> "$LOGFILE"
